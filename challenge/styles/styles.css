@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h5, h6, p {
+    color: white;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+h1:hover {
+    color: black;
+}
+h1, h5, section, footer p {
+    font-family: Calibri;
+}
+h5, h6 {
+    margin-bottom: 20px;
+}
+body {
+    background-color: #fb6f92;
+}
+main p {
+    font-size: 1.5em;
+    margin: 0 auto 30px;
+}
+ol li {
+    font-weight: 600;
+}
+section {
+    padding: 0 15px;
+}
+img {
+    display: block;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin: 20px auto 30px;
+}
+main, footer {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+footer p{
+    color: black;
+    font-size: small;
+    margin: 0;
+}
