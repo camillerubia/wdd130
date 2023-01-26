@@ -16,6 +16,10 @@
 nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
     text-align: center;
 }
+#hero-msg *{
+    margin: 20px 0;
+}
+
 #background {
     height: 725px;
     background-color: #8ECAE6;
