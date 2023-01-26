@@ -69,6 +69,7 @@ footer, footer a {
 }
 footer p {
     font-size: 1.2em;
+    margin: 20px 0;
     color: white;
 }
 footer p a:hover {
