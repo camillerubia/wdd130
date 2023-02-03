@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Roboto+Slab:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,22 +12,46 @@
 .logo, .icon {
     width: 80px;
 }
+.icon {
+    padding-top: 10px;
+}
+#logo_link {
+    padding-top: 5px;
+}
 #hero-img {
     width: 100%;
 }
-nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
+#hero-msg h1, #hero-msg h4, .button-box, main section {
     text-align: center;
+}
+#hero {
+    border: 1px solid #484538;
 }
 #hero-msg *{
     margin: 20px 0;
 }
-
+#hero-msg {
+    background-color: white;
+    color: #023047;
+    padding: 35px;
+}
+h4{
+    padding-bottom: 15px;
+}
 #background {
     height: 725px;
     background-color: #8ECAE6;
+    margin-bottom: 80px;
 }
 body {
     background: #fcfbfb;
+    font-family: Manrope, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
 }
 header, nav {
     background-color: #023047;
@@ -33,6 +59,8 @@ header, nav {
 nav a {
     color: #8ECAE6;
     text-decoration: none;
+    text-align: center;
+    padding: 35px;
 }
 nav a:hover {
     background-color: #8ECAE6;
@@ -42,18 +70,38 @@ nav a:hover {
     background-color: #8ECAE6;
     color: #023047;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover {
     background-color: #023047;
     color: #8ECAE6;
 }
-#hero-msg {
-    background-color: white;
-    color: #023047;
+.home-title {
+    margin-top: 10px;
+    font-size: 2em;
+    font-family: "Roboto Slab", Trebuchet MS, sans-serif;
+}
+.card-img {
+    border: 10px solid #8ECAE6;
+}
+.camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.rivers-card {
+    margin-top: 80px;
+}
+.msg p {
+    font-size: 0.8em;
+    padding-bottom: 15px;
 }
 .msg {
     background-color: #023047;
-    margin: 20px 0;
+    line-height: 1.5em;
+    padding: 35px;
+    margin-top: 200px;
 }
 .msg h2, .msg p {
     color: white;
@@ -63,8 +111,18 @@ main section h2 {
     margin: 20px 0;
     color: #484538;
 }
+main section img {
+    box-sizing: border-box;
+}
 .home-title, h4{ 
     color: #023047;
+}
+footer {
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+footer .social img {
+    padding-top: 15px;
 }
 footer, footer a {
     background-color: #023047;
