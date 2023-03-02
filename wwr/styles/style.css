@@ -46,37 +46,37 @@ nav a:hover {
     background-color: #8ECAE6;
     color: #023047;
 }
-#hero {
+.hero {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: -100px;
 }
-#hero-box {
+.hero-box {
     grid-column: 1/4;
     grid-row: 1/3;
     z-index: -1;
 }
-#hero-img {
+.hero-img {
     width: 100%;
 }
-#hero-msg h1, #hero-msg h4, .button-box, main section {
+.hero-msg h1, .hero-msg h4, .button-box, main section {
     text-align: center;
 }
-#hero-msg {
+.hero-msg {
     padding: 35px;
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 100px;
 }
-#hero-msg h4{
+.hero-msg h4{
     padding-bottom: 15px;
 }
-.home-title {
+.home-title, .rates-title {
     font-size: 2em;
     margin-bottom: 20px;
     font-family: "Roboto Slab", Trebuchet MS, sans-serif;
 }
-.home-title, #hero-msg h4{ 
+.home-title, .rates-title, .hero-msg h4{ 
     color: #fcfbfb;
 }
 #background {
@@ -103,7 +103,9 @@ nav a:hover {
     margin-top: 50px;
     border-radius: 5px;
 }
-.book:hover {
+.book:hover, .grand-three-price:hover, 
+.salmon-five-price:hover, .grand-six-price:hover, 
+.desolation-six-price:hover {
     background-color: #023047;
     color: #8ECAE6;
 }
@@ -114,6 +116,17 @@ nav a:hover {
 .home-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+}
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 70px;
+    grid-column-gap: 50px;
+    grid-row-gap: 70px;
+}
+.rates-grid section{
+    display: flex;
+    justify-content: center;
 }
 main section h2 {
     color: #484538;
@@ -127,8 +140,19 @@ main section img {
     box-shadow: 5px 5px 10px #6f7364;
     width: 100%
 }
+.rates-content-wrapper{
+    max-width: 400px;
+}
+.rates-card-img {
+    width: 100%;
+    border: 5px solid #8ECAE6;
+    height: 400px;
+    box-shadow: 5px 5px 10px #6f7364;
+    object-fit: cover;
+    max-width: 400px;
+}
 .card-img:hover {
-    opacity: .6;
+    opacity: .4;
     transform: scale(1.1);
 }
 .rivers-card {
@@ -145,6 +169,46 @@ main section img {
     margin: 200px 0;
     grid-column: 8/10;
     grid-row: 2/3;
+}
+.rates-card-content h5 {
+    color: #484538;
+    font-style: italic;
+    padding-top: 20px;
+}
+.rates-card-content h5, ul, .rates-button-box {
+    text-align: left;
+}
+ul {
+    color: #023047;
+    padding: 20px;
+}
+
+.grand-three-price, .salmon-five-price, .grand-six-price, .desolation-six-price{
+    background-color: #8ECAE6;
+    color: #023047;
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+.container {
+    position: relative;
+}
+.container .rates-hover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.container:hover .rates-hover {
+    display: block;
+}
+.container:hover .rates-card-img {
+    opacity: 0.2;
+}
+.rates-card-title, span {
+    color: #023047;
 }
 .mountains {
     height: 100%;
@@ -198,7 +262,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    .rates-grid{
+        grid-template-columns: 1fr;
+    }
+    .hero, .home-grid {
         display: block;
         height: auto;
     }
@@ -212,16 +279,16 @@ footer a:hover {
         display: block;
         padding: 15px;
     }
-    #hero {
+    .hero {
         margin-top: 0;
     }
-    #hero-msg {
+    .hero-msg {
         margin-top: 0;
     }
-    #hero-msg h4 {
+    .hero-msg h4 {
         display: none;
     }
-    .home-title {
+    .home-title, .rates-title {
         font-size: 25px;
         color: #6f7364;
     }
