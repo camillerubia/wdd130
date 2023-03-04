@@ -23,7 +23,7 @@ Fonts are separated by a | */
   --nav-link-color: #132A13;
   --nav-background-color: #F0F3BD;
   --nav-hover-link-color: #31572C;
-  --nav-hover-background-color: #ECF39E;
+  --nav-hover-background-color: #132A13;
 }
 
 
@@ -123,7 +123,7 @@ nav a:link, nav a:visited {
 }
 nav a:hover {
   color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+  border-bottom: 4px solid var(--nav-hover-background-color);
 }
 
 .sitemap {
