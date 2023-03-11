@@ -14,7 +14,7 @@
     padding-top: 10px;
 }
 
-#logo_link {
+#logo_link, #footer_logo_link {
     padding-top: 5px;
     justify-self: center;
     align-self: center;
@@ -127,6 +127,7 @@ body, html {
     color: #ECF39E;
     margin-top: -140px;
     font-size: 20px;
+    font-weight: 400;
 }
 
 /* DEV PAGE */
