@@ -87,13 +87,13 @@ nav a:hover {
     padding-bottom: 15px;
 }
 
-.home-title, .rates-title {
+.home-title, .rates-title, .contact-title {
     font-size: 2em;
     margin-bottom: 20px;
     font-family: "Roboto Slab", Trebuchet MS, sans-serif;
 }
 
-.home-title, .rates-title, .hero-msg h4{ 
+.home-title, .rates-title, .contact-title, .hero-msg h4{ 
     color: #fcfbfb;
 }
 
@@ -280,14 +280,6 @@ main section img {
     margin-bottom: 20px;
 }
 /* CONTACT PAGE */
-.bg-img {
-    background-image: url("images/contact-img");
-    min-height: 380px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
 form {
     margin: 0 auto;
     width: 400px;
