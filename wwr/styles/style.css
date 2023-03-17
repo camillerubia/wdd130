@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Love+Ya+Like+A+Sister&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
 }
 
 .logo, .icon {
@@ -19,43 +14,176 @@
     padding-top: 10px;
 }
 
-#logo_link {
+#logo_link, #footer_logo_link {
     padding-top: 5px;
     justify-self: center;
     align-self: center;
 }
 
-body {
-    background: #fcfbfb;
-    font-family: Manrope, Helvetica, sans-serif;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 150px auto;
-    background-color: rgba(2, 48, 71, 0.3);
+header.home-header, .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header.active-scroll, .header {
+    background-color: rgba(240, 243, 189, 0.9);
+}
+
+header.home-header nav a {
+    color: #ECF39E;
+}
+
+header.active-scroll nav a {
+    color: #132A13;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
 }
 
 nav a {
-    color: #8ECAE6;
+    color: #31572C;
     text-decoration: none;
     text-align: center;
     padding: 35px;
 }
 
-nav a:hover {
-    background-color: #8ECAE6;
-    color: #023047;
+header.home-header nav a:hover {
+    border-bottom: 4px solid #ECF39E;
 }
 
+nav a:hover, header.active-scroll nav a:hover {
+    color: #31572C;
+    border-bottom: 4px solid #132A13;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Cutive Mono", Helvetica, sans-serif;
+}
+
+.first-img {
+    background-image: url('../images/home-3.jpg');
+    padding: 220px 0;
+}
+
+.home-logo {
+    display: block;
+    margin: auto;
+}
+
+.second-img {
+    background-image: url('../images/home-1.jpg');
+}
+
+.third-img {
+    background-image: url('../images/home-2.jpg');
+}
+
+.first-img, .second-img, .third-img {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first-caption, .second-caption, .third-caption {
+    height: auto;
+    font-size: 20px;
+}
+
+.first-caption {
+    background-color: #ECF39E;
+    color:#31572C;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-title {
+    padding-bottom: 12px;
+}
+
+.home-caption {
+    text-align: center;
+    color: #132A13;
+    font-size: 100px;
+    padding: 300px;
+}
+
+.first-caption, .third-caption {
+    padding: 30px 70px;
+}
+
+.second-caption {
+    padding: 30px;
+}
+
+.second-caption, .third-caption {
+    background-color: #31572C;
+    color:#ECF39E;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;  
+}
+
+
+.basic-list, .premium-list {
+    padding: 10px;
+}
+
+.basic-card {
+    position: relative;
+}
+
+.basic-card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-right: 2px solid;
+    top: 0;
+    right: -17px;
+}
+
+.basic-card, .premium-card {
+    padding: 0 235px;
+}
+
+.faq-card {
+    padding: 10px;
+}
+
+.ending-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px;
+}
+
+.home-end-quote {
+    color: #ECF39E;
+    margin-top: -140px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* DEV PAGE */
+.dev-photo {
+    width: 300px;
+}
+.website-card img{
+    width:600px;
+}
+
+/* CONTACT PAGE */
 .hero {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -72,220 +200,29 @@ nav a:hover {
     width: 100%;
 }
 
-.hero-msg h1, .hero-msg h4, .button-box, main section {
-    text-align: center;
-}
-
 .hero-msg {
     padding: 35px;
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 100px;
+    text-align: center;
+    color: #ECF39E;
 }
 
-.hero-msg h4{
-    padding-bottom: 15px;
-}
-
-.home-title, .rates-title, .contact-title {
+.hero-msg h1 {
     font-size: 2em;
-    margin-bottom: 20px;
-    font-family: "Roboto Slab", Trebuchet MS, sans-serif;
 }
 
-.home-title, .rates-title, .contact-title, .hero-msg h4{ 
-    color: #fcfbfb;
+.contact-footer {
+    margin-top: -7px;
 }
 
-#background {
-    height: 725px;
-    background-color: #8ECAE6;
-    grid-column: 1/11;
-    grid-row: 4/9;
-}
-
-.book {
-    background-color: #8ECAE6;
-    color: #023047;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 15px 30px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.join {
-    background-color: #fcfbfb;
-    color: #023047;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius: 5px;
-}
-
-.book:hover, .grand-three-price:hover, 
-.salmon-five-price:hover, .grand-six-price:hover, 
-.desolation-six-price:hover {
-    background-color: #023047;
-    color: #8ECAE6;
-}
-
-.join:hover {
-    background-color: #8ECAE6;
-    color: #484538;
-}
-
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}
-
-.rates-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 70px;
-    grid-column-gap: 50px;
-    grid-row-gap: 70px;
-}
-
-.rates-grid section{
-    display: flex;
-    justify-content: center;
-}
-
-main section h2 {
-    color: #484538;
-}
-
-main section img {
-    box-sizing: border-box;
-}
-
-.card-img {
-    border: 10px solid #8ECAE6;
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #6f7364;
-    width: 100%
-}
-
-.rates-content-wrapper{
-    max-width: 400px;
-}
-
-.rates-card-img {
-    width: 100%;
-    border: 5px solid #8ECAE6;
-    height: 400px;
-    box-shadow: 5px 5px 10px #6f7364;
-    object-fit: cover;
-    max-width: 400px;
-}
-
-.card-img:hover {
-    opacity: .4;
-    transform: scale(1.1);
-}
-
-.rivers-card {
-    margin: 200px 0;
-    grid-column: 2/4;
-    grid-row: 2/3;
-}
-
-.camping-card {
-    margin: 200px 0;
-    grid-column: 5/7;
-    grid-row: 2/3;
-}
-
-.rapids-card {
-    margin: 200px 0;
-    grid-column: 8/10;
-    grid-row: 2/3;
-}
-
-.rates-card-content h5 {
-    color: #484538;
-    font-style: italic;
-    padding-top: 20px;
-}
-
-.rates-card-content h5, .rates-ul, .rates-button-box {
-    text-align: left;
-}
-
-.rates-ul {
-    color: #023047;
-    padding: 20px;
-}
-
-.grand-three-price, .salmon-five-price, .grand-six-price, .desolation-six-price{
-    background-color: #8ECAE6;
-    color: #023047;
-    padding: 15px 30px;
-    border-radius: 5px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.container {
-    position: relative;
-}
-
-.container .rates-hover {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-.container:hover .rates-hover {
-    display: block;
-}
-
-.container:hover .rates-card-img {
-    opacity: 0.2;
-}
-
-.rates-card-title, span {
-    color: #023047;
-}
-
-.mountains {
-    height: 100%;
-    grid-column: 2/7;
-    grid-row: 5/8;
-    box-shadow: 5px 5px 10px #6f7364;
-    width: 100%
-}
-
-.msg p {
-    font-size: 0.8em;
-    padding-bottom: 15px;
-}
-
-.msg {
-    background-color: #023047;
-    line-height: 1.5em;
-    padding: 35px;
-    grid-column: 6/10;
-    grid-row: 6/7;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-
-.msg h2, .msg p {
-    color: white;
-    margin-bottom: 20px;
-}
-/* CONTACT PAGE */
 form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
-    border: 1px solid #023047;
-    background-color: #023047;
+    border: 1px solid #132A13;
+    background-color: #132A13;
 }
 
 .contact-ul {
@@ -309,7 +246,7 @@ label {
     width: 90px;
     text-align: right;
     font-size: 16px;
-    color: #8ECAE6;
+    color: #ECF39E;
 }
 
 form, button {
@@ -339,8 +276,8 @@ textarea{
 }
 
 button {
-    background-color: #8ECAE6;
-    color: #023047;
+    background-color: #ECF39E;
+    color: #132A13;
     border: 0;
 }
 .contact-ul button {
@@ -348,71 +285,63 @@ button {
 }
 
 button:hover {
-    background-color: #fcfbfb;
-    color: #484538;
+    background-color: #31572C;
+    color: #F0F3BD;
 }
 
 #feedback {
-    background-color: antiquewhite;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: .5em;
     display: none;
+    background-color: antiquewhite;
+    padding: .5em;
+    margin: 10px auto;
+    width: 400px;
+    color: #132A13;
 }
 
-.moveDown {
+/* .moveDown {
     margin-top: 2em;
-}
-
-.contact-footer {
-    margin-top: -7px;
-}
+} */
 
 footer {
-    padding: 25px 50px;
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-around;
+    padding: 0px 20px;
+    margin-top: -1px;
     align-items: center;
-}
-
-footer .social img {
-    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer, footer a {
-    background-color: #023047;
-    color: #8ECAE6;
+    background-color: #132A13;
+    color: #F0F3BD;
     text-decoration: none;
 }
 
 footer p {
-    font-size: 1.2em;
-    margin: 20px 0;
-    color: white;
+    margin: 10px 0;
+    padding: 20px;
+    color: #F0F3BD;
 }
 
-footer p a:hover {
-    text-decoration: underline;
+.footer-container {
+    display: flex;
+    align-items: center;
 }
+/* .copyright {
+    
+} */
 
 footer a:hover {
-    background-color: #8ECAE6;
-    color: #023047;
+    color: #F0F3BD;
+    border-bottom: 4px solid #F0F3BD;
+}
+
+footer a#footer_logo_link:hover {
+    border-bottom: 0;
 }
 
 @media screen and (max-width: 900px) {
-    .rates-grid{
-        grid-template-columns: 1fr;
-    }
-    .hero, .home-grid {
-        display: block;
-        height: auto;
-    }
     header {
-        background: rgb(2, 48, 71);
+        background: rgb(240, 243, 189);
     }
     nav, footer {
         flex-direction: column;
@@ -421,37 +350,12 @@ footer a:hover {
         display: block;
         padding: 15px;
     }
-    .hero {
-        margin-top: 0;
-    }
-    .hero-msg {
-        margin-top: 0;
-    }
-    .hero-msg h4 {
-        display: none;
-    }
-    .home-title, .rates-title {
-        font-size: 25px;
-        color: #6f7364;
-    }
-    .rivers-card, .camping-card, .rapids-card { 
-        margin: 50px auto;
-        width: 60%;
+
     }
     #background {
         display: none;
     }
-    .mountains, .msg {
-        display: block;
-        margin: 0 auto;
-    }
-    .mountains {
-        width: 80%;
-    }
-    .msg {
-        width: 90%;
-    }
+  
     footer {
-        margin-top: 25px;
+        margin-top: -1px;
     }
-}
