@@ -21,27 +21,48 @@
 }
 
 header {
-    display: grid;
-    grid-template-columns: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header.home-header, .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header.active-scroll, .header {
     background-color: rgba(240, 243, 189, 0.9);
+}
+
+header.home-header nav a {
+    color: #ECF39E;
+}
+
+header.active-scroll nav a {
+    color: #132A13;
 }
 
 nav {
     display: flex;
-    justify-content: flex-end;
 }
 
 nav a {
-    color: #132A13;
+    color: #31572C;
     text-decoration: none;
     text-align: center;
     padding: 35px;
 }
 
-nav a:hover {
+header.home-header nav a:hover {
+    border-bottom: 4px solid #ECF39E;
+}
+
+nav a:hover, header.active-scroll nav a:hover {
     color: #31572C;
     border-bottom: 4px solid #132A13;
-  }
+}
 
 body, html {
     height: 100%;
@@ -50,6 +71,7 @@ body, html {
 
 .first-img {
     background-image: url('../images/home-3.jpg');
+    padding: 220px 0;
 }
 
 .home-logo {
@@ -67,8 +89,6 @@ body, html {
 
 .first-img, .second-img, .third-img {
     height: 100%; 
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,29 +107,54 @@ body, html {
     text-align: center;
 }
 
+.home-title {
+    padding-bottom: 12px;
+}
+
 .home-caption {
     text-align: center;
     color: #132A13;
     font-size: 100px;
     padding: 300px;
-    /* -webkit-text-stroke: 0.1px #31572C; */
+}
+
+.first-caption, .third-caption {
+    padding: 30px 70px;
+}
+
+.second-caption {
+    padding: 30px;
 }
 
 .second-caption, .third-caption {
     background-color: #31572C;
     color:#ECF39E;
     text-align: left;
-    padding: 20px;
-}
-
-.second-caption, .third-caption {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-column-gap: 30px;  
 }
+
 
 .basic-list, .premium-list {
     padding: 10px;
+}
+
+.basic-card {
+    position: relative;
+}
+
+.basic-card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-right: 2px solid;
+    top: 0;
+    right: -17px;
+}
+
+.basic-card, .premium-card {
+    padding: 0 235px;
 }
 
 .faq-card {
@@ -258,12 +303,11 @@ button:hover {
 } */
 
 footer {
-    padding: 10px 20px;
+    padding: 0px 20px;
     margin-top: -1px;
     align-items: center;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-
+    display: flex;
+    justify-content: space-between;
 }
 
 footer, footer a {
@@ -278,13 +322,18 @@ footer p {
     color: #F0F3BD;
 }
 
-.copyright {
-    grid-column: 6/6;
+.footer-container {
+    display: flex;
+    align-items: center;
 }
 
 footer a:hover {
     color: #F0F3BD;
     border-bottom: 4px solid #F0F3BD;
+}
+
+footer a#footer_logo_link:hover {
+    border-bottom: 0;
 }
 
 @media screen and (max-width: 900px) {

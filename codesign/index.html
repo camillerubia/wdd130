@@ -19,7 +19,7 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
-    <main class="home-main">
+    <main class="home-main test">
         <section class="home-purpose">
             <div class="first-img">
                 <img class="home-logo" src="images/codesign-10.png" alt="coDesign logo">
@@ -109,12 +109,29 @@
         </section>
     </main>
     <footer>
-        <a id="footer_logo_link" href="index.html">
-            <img class="logo" src="images/codesign-10.png" alt="coDesign Logo">
-        </a>
-        <p><a href="site-plan.html">Site Plan</a></p>
-        <p><a href="contactus.html">Contact Us</a></p>
+        <div class="footer-container">
+            <a id="footer_logo_link" href="index.html">
+                <img class="logo" src="images/codesign-10.png" alt="coDesign Logo">
+            </a>
+            <p><a href="site-plan.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+        </div>
         <p class="copyright">coDesign &copy; 2023 - Camille Rubia</p>
     </footer>
+    <script>
+        window.onscroll = function() {
+            scroll();
+        };
+    
+        function scroll() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector(".home-header").classList.add("active-scroll");
+            }
+            else{
+                document.querySelector(".home-header").classList.remove("active-scroll");
+            }
+        }
+    
+    </script>
 </body>
 </html>
