@@ -32,6 +32,7 @@ header.home-header, .header {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 header.active-scroll, .header {
@@ -178,8 +179,68 @@ body, html {
 }
 
 /* DEV PAGE */
+.dev-page-main {
+    padding: 90px 50px 0 50px;
+    color: #132A13;
+}
+
+.about-me-wrapper {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    align-content: center;
+    justify-items: flex-start;
+}
+
+.dev-title {
+    justify-self: start;
+    padding: 20px 0;
+}
+
+.about-me-caption {
+    grid-column: 1/1;
+    background-color: #31572C;
+    color: #ECF39E;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border: 5px solid #132A13;
+    min-height: 100%;
+    min-width: auto;
+    display: flex;
+    max-width: 1500px;
+}
+
+.about-me-caption p {
+    font-size: 20px;
+    line-height: 1.5;
+    align-self: center;
+}
+
+.dev-photo-wrapper {
+    grid-column: 2/2;
+    border: 5px solid #132A13;
+    max-height: 610px;
+    width: 100%;
+    min-width: 200px;
+}
+
 .dev-photo {
-    width: 300px;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.portfolio {
+    padding: 50px;
+}
+
+.website-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .img-container {
@@ -189,8 +250,8 @@ body, html {
 
 .img-container img{
     display: block;
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .overlay-text {
@@ -221,6 +282,16 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     font-weight: 800;
+}
+
+.website-caption {
+    padding: 20px 0;
+}
+
+.website-content {
+    line-height: 0.8;
+    padding-bottom: 30px;
+    font-size: 20px;
 }
 
 /* CONTACT PAGE */
@@ -338,10 +409,6 @@ button:hover {
     color: #132A13;
 }
 
-/* .moveDown {
-    margin-top: 2em;
-} */
-
 footer {
     padding: 0px 20px;
     margin-top: -1px;
@@ -377,22 +444,54 @@ footer a#footer_logo_link:hover {
 }
 
 @media screen and (max-width: 900px) {
+
     header {
         background: rgb(240, 243, 189);
+        color: #132A13;
     }
+
     nav, footer {
         flex-direction: column;
     }
+
     nav a {
         display: block;
         padding: 15px;
     }
 
-    }
     #background {
         display: none;
     }
+    
+    .dev-page-main {
+        padding: 10px;
+        font-size: 20px;
+        margin: 0
+    }
+    .about-me {
+        padding-top: 150px;
+    }
+
+    .about-me-wrapper {
+        width: 900px;
+    }
+
+    .about-me-caption p, .website-content, .website-caption a {
+        font-size: 15px;
+    }
   
+    .img-container img, .overlay-text, header {
+        width: 800px;
+        height: auto;
+    }
+
+    .website-content {
+        font-size: 15px;
+        width: 800px;
+    }
+
+
     footer {
         margin-top: -1px;
     }
+}

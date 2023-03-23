@@ -288,6 +288,10 @@ form {
     background-color: #023047;
 }
 
+#contact-hero.hero, #contact-hero-img.hero-img {
+    height: 800px;
+}
+
 .contact-ul {
     list-style: none;
     padding: 0;
