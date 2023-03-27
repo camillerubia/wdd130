@@ -25,31 +25,31 @@
                 <img id="contact-hero-img" class="hero-img" src="images/contact-2.jpg" alt="People enjoying white water rafting">
             </div>
             <section id="contact-hero-msg" class="hero-msg">
-                <h1 class="contact-title">Contact Us</h1>    
-                <form action="/my-handling-form-page" method="post">
-                    <ul class="contact-ul">
-                        <li>
-                            <label for="name">First Name:</label>
-                            <input type="text" id="name" name="user_name">
-                        </li>
-                        <li>
-                            <label for="name">Last Name:</label>
-                            <input type="text" id="name" name="user_name">
-                        </li>
-                        <li>
-                            <label for="mail">Email:</label>
-                            <input type="email" id="mail" name="user_email">
-                        </li>
-                        <li>
-                            <label for="name">Company Name:</label>
-                            <input type="text" id="name" name="user_name">
-                        </li>
-                        <li class="button">
-                            <button type="submit">Submit</button>
-                        </li>
-                    </ul>
-                </form>
-                <div id="feedback"></div> 
+                <h1 class="contact-title">Contact Us</h1>
+                <div class="form-container">  
+                    <form action="/my-handling-form-page" method="post">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname"
+                        placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname"
+                        placeholder="Your last name..">
+
+                        <label for="email-number">Email Address / Contact Number</label>
+                        <input type="text" id="email-number" name="email-num"
+                        placeholder="Your email/contact number..">
+
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company-name"
+                        placeholder="Your business/company name..">
+                        <div class="button-container">
+                            <button type="submit" class="submit-button">Submit</button>
+                        </div>
+                    </form>
+                    <div id="contact-feedback"></div> 
+                </div>
+                
             </section>
         </div>
     </main>
@@ -61,12 +61,19 @@
             <p><a href="site-plan.html">Site Plan</a></p>
             <p><a href="devpage.html">Dev Page</a></p>
             <p><a href="contactus.html">Contact Us</a></p>
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="Valid CSS!">
+                </a>
+            </p>
         </div>
         <p class="copyright">coDesign &copy; 2023 - Camille Rubia</p>
     </footer>
     <script>
         // get the feedback div element so we can do something with it.
-        const feedbackElement = document.getElementById('feedback');
+        const feedbackElement = document.getElementById('contact-feedback');
         // get the form so we can read what was entered in it.
         const formElement = document.forms[0];
         // add a 'listener' to wait for a submission of our form. When that happens run the code below.
@@ -75,11 +82,13 @@
             e.preventDefault();
             // set the contents of our feedback element to a message letting the user know the form was submitted successfully. 
             // Notice that we pull the name that was entered in the form to personalize the message!
-            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            feedbackElement.innerHTML = 'Hi '+ formElement.firstname.value + ' ' + formElement.lastname.value +'! Your message has been submitted. Please wait for our response soon.';
             // make the feedback element visible.
-            feedbackElement.style.display = "flex";
+            feedbackElement.style.display = "block";
             // add a class to move everything down so our message doesn't cover it.
             document.body.classList.toggle('moveDown');
+            
+            console.log('test');
         });
     </script>
 </body>
