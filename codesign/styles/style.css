@@ -138,7 +138,6 @@ body, html {
     grid-column-gap: 30px;  
 }
 
-
 .basic-list, .premium-list {
     padding: 10px;
 }
@@ -390,7 +389,6 @@ button:hover {
     background-color: #31572C;
     color: #ECF39E;
   }
-
 
 #contact-feedback {
     background-color: #F0F3BD;
